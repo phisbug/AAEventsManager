@@ -36,6 +36,7 @@ var AppModule = (function(){
 
 			e.preventDefault();
 
+
 			//values
 			var event_name = $('[name=event_name]').val();
 			var start_date = $('[name=start_date]').val();
@@ -66,6 +67,8 @@ var AppModule = (function(){
 				return ;
 				exit();
 			}
+
+			$("#addeventbutton").attr('disabled', 'disabled');
 
 
 			//array of days
@@ -230,7 +233,12 @@ var AppModule = (function(){
 			            //$( '.errors' ).html(errorThrown.responseJSON.message);
 
 			        }							
-				});//end ajax
+				}).done(function(){
+
+
+					$("#addeventbutton").removeAttr('disabled');
+
+				});;//end ajax
 
 			}//end if final range
 

@@ -4,6 +4,8 @@
 
 @section('content')
 
+<div class="overlay"></div>
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -112,7 +114,7 @@
                         </div><!-- ./ end row -->
 
 
-                        <button class="btn btn-primary">Add Event</button>
+                        <button id="addeventbutton" class="btn btn-primary">Add Event</button>
 
                 </form>
                 
